@@ -21,7 +21,7 @@ int maxOpacity = 800;
 
 void setup() 
 {
-  size(700,700);
+  size(800,700);
   figure = loadImage("sketchfigurecopy.png");
   maxHue = height - activeBorder;
   maxSaturation = width - activeBorder;
@@ -178,5 +178,11 @@ void keyPressed()
     brushSize += 5;
   }
 
+  if (key == 'c' || key == 'C')
+  {
+    noStroke();
+    fill(#ffffff);
+    rect(border, border, (width-2*border), (height-2*border));
+  }
 }
 
